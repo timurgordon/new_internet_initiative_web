@@ -971,6 +971,19 @@
     transform: perspective(2500px) rotateX(0);
 }
 
+/* ===================================================================
+ * # added later aos
+ *
+ * ------------------------------------------------------------------- */
+
+[data-aos^=fade-out][data-aos^=fade-out] {
+    opacity: 1;
+    transition-property: opacity;
+}
+
+[data-aos^=fade-out][data-aos^=fade-out].aos-animate {
+    opacity: 0;
+}
 
 /*# sourceMappingURL=aos.css.map*/
 
