@@ -3682,7 +3682,7 @@ footer .row {
 
 #one-item-2 {
     position: absolute;
-    transform: translateY(80px) translateX(440px);
+    transform: translateY(80px) translateX(444px);
     z-index: 5;
     font-size: 3.2rem;
 }
@@ -3709,15 +3709,23 @@ footer .row {
     left: 700px;
     top: 200px;
 
-    -webkit-animation: xAxis 2.5s infinite ease-in;
-    animation: xAxis 2.5s infinite ease-in;
+    -webkit-animation: xAxis 2.5s ease-in;
+    animation: xAxis 2.5s ease-in;
     animation-delay: 3s;
+
+    -webkit-animation: xAxis3 2.5s ease-in;
+    animation: xAxis3 2.5s ease-in;
+    animation-delay: 8s;
 }
 
 .dot-box{
-    -webkit-animation: yAxis 2.5s infinite ease-out;
-    animation: yAxis 2.5s infinite ease-out;
+    -webkit-animation: yAxis 2.5s ease-out;
+    animation: yAxis 2.5s ease-out;
     animation-delay: 3s;
+
+    -webkit-animation: yAxis3 2.5s ease-out;
+    animation: yAxis3 2.5s ease-out;
+    animation-delay: 8s;
 }
 
 @keyframes xAxis {
@@ -3725,25 +3733,34 @@ footer .row {
         left: 700px;
         top: 200px;
     }
-    50% {
+    100% {
         animation-timing-function: ease-in;
         transform: translateX(-100px);
     }
-    100% {
+  }
+
+@keyframes xAxis3 {
+    0% {
         left: 700px;
         top: 200px;
-        animation-timing-function: ease-out;
-
+    }
+    100% {
+        animation-timing-function: ease-in;
+        transform: translateX(-100px);
     }
   }
   
 @keyframes yAxis {
-    50% {
+    100% {
         animation-timing-function: ease-out;
         transform: translateY(-100px);
     }
+  }
+
+@keyframes yAxis3 {
     100% {
-        animation-timing-function: ease-in;
+        animation-timing-function: ease-out;
+        transform: translateY(-100px);
     }
   }
 
