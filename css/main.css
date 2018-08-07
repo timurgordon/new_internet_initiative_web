@@ -3657,11 +3657,144 @@ footer .row {
     80% { opacity: 0; }
     100% { opacity: 0; }  
 }
+
 /* --------------------------------------------------------------- 
- * ## tabs
+ * ## problem page
  * --------------------------------------------------------------- */
+
+.prob {
+    padding-bottom: 500px;
+    position: relative;
+}
+
+.problem-icon {
+    color: whitesmoke;
+    margin-top: -.6rem;
+    position: relative;
+}
+
+#one-item-1 {
+    position: absolute;
+    transform: translateY(180px) translateX(350px);
+    z-index: 5;
+    font-size: 3.2rem;
+}
+
+#one-item-2 {
+    position: absolute;
+    transform: translateY(80px) translateX(440px);
+    z-index: 5;
+    font-size: 3.2rem;
+}
+
+.map {
+    position: absolute;
+    transform: translateY(10px) translateX(-150px);
+    z-index: 0;
+    width: 28em;
+}
+
+.dot {
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    top: 100;
+    left: 100;
+}
+
+.dot1{
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    left: 700px;
+    top: 200px;
+
+    -webkit-animation: xAxis 2.5s infinite ease-in;
+    animation: xAxis 2.5s infinite ease-in;
+    animation-delay: 3s;
+}
+
+.dot-box{
+    -webkit-animation: yAxis 2.5s infinite ease-out;
+    animation: yAxis 2.5s infinite ease-out;
+    animation-delay: 3s;
+}
+
+@keyframes xAxis {
+    0% {
+        left: 700px;
+        top: 200px;
+    }
+    50% {
+        animation-timing-function: ease-in;
+        transform: translateX(-100px);
+    }
+    100% {
+        left: 700px;
+        top: 200px;
+        animation-timing-function: ease-out;
+
+    }
+  }
   
-  .tabs {
+@keyframes yAxis {
+    50% {
+        animation-timing-function: ease-out;
+        transform: translateY(-100px);
+    }
+    100% {
+        animation-timing-function: ease-in;
+    }
+  }
+
+.dot1-2{
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    left: 762px;
+    top: 200px;
+
+    -webkit-animation: xAxis-2 2.5s infinite ease-in;
+    animation: xAxis-2 2.5s infinite ease-in;
+    animation-delay: 3s;
+}
+
+.dot-box-2{
+    -webkit-animation: yAxis-2 2.5s infinite ease-out;
+    animation: yAxis-2 2.5s infinite ease-out;
+    animation-delay: 3s;
+}
+
+@keyframes xAxis-2 {
+    0% {
+        left: 762px;
+        top: 200px;
+    }
+    50% {
+        animation-timing-function: ease-in;
+        transform: translateX(100px);
+    }
+    100% {
+        left: 762px;
+        top: 200px;
+        animation-timing-function: ease-out;
+
+    }
+  }
+  
+@keyframes yAxis-2 {
+    50% {
+        animation-timing-function: ease-out;
+        transform: translateY(-100px);
+    }
+    100% {
+        animation-timing-function: ease-in;
+    }
+  }
+    
+
+
+.tabs {
     display: block;
     display: -webkit-flex;
     display: -moz-flex;
@@ -3697,10 +3830,10 @@ footer .row {
       .tabs [class^="tab"] [type="radio"]:hover, .tabs [class^="tab"] [type="radio"]:focus,
       .tabs [class*=" tab"] [type="radio"]:hover,
       .tabs [class*=" tab"] [type="radio"]:focus {
-        border-bottom: 1px solid #fd264f; }
+        border-bottom: 1px solid #0087cc; }
       .tabs [class^="tab"] [type="radio"]:checked,
       .tabs [class*=" tab"] [type="radio"]:checked {
-        border-bottom: 2px solid #fd264f; }
+        border-bottom: 2px solid #0087cc; }
       .tabs [class^="tab"] [type="radio"]:checked + div,
       .tabs [class*=" tab"] [type="radio"]:checked + div {
         opacity: 1; }
@@ -3715,7 +3848,8 @@ footer .row {
         -o-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out; }
     .tabs .tab-2 {
-      width: 50%; }
+      width: 50%;
+    }
       .tabs .tab-2 [type="radio"] + div {
         width: 200%;
         margin-left: 200%; }
@@ -3725,7 +3859,5 @@ footer .row {
         margin-left: 100%; }
       .tabs .tab-2:last-child [type="radio"]:checked + div {
         margin-left: -100%; }
-
-
 
 /*# sourceMappingURL=main.css.map */
