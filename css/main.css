@@ -3665,6 +3665,7 @@ footer .row {
 .prob {
     padding-bottom: 500px;
     position: relative;
+    width: 1200px;
 }
 
 .problem-icon {
@@ -3675,21 +3676,26 @@ footer .row {
 
 #one-item-1 {
     position: absolute;
-    transform: translateY(180px) translateX(350px);
+    transform: translateY(180px) translateX(250px);
     z-index: 5;
     font-size: 3.2rem;
 }
 
 #one-item-2 {
     position: absolute;
-    transform: translateY(80px) translateX(444px);
+    transform: translateY(80px) translateX(344px);
     z-index: 5;
     font-size: 3.2rem;
 }
 
+.two-item {
+    width: 100px;
+    float: left;
+}
+
 .map {
     position: absolute;
-    transform: translateY(10px) translateX(-150px);
+    transform: translateY(10px) translateX(-250px);
     z-index: 0;
     width: 28em;
 }
@@ -3768,12 +3774,17 @@ footer .row {
     height: 8px;
     width: 8px;
     position: absolute;
-    left: 762px;
+    left: 962px;
     top: 200px;
 
     -webkit-animation: xAxis-2 2.5s infinite ease-in;
     animation: xAxis-2 2.5s infinite ease-in;
     animation-delay: 3s;
+    animation-play-state: initial;
+}
+
+.dot1-2:hover{
+    animation-play-state: running;
 }
 
 .dot-box-2{
@@ -3784,7 +3795,7 @@ footer .row {
 
 @keyframes xAxis-2 {
     0% {
-        left: 762px;
+        left: 962px;
         top: 200px;
     }
     50% {
@@ -3792,7 +3803,7 @@ footer .row {
         transform: translateX(100px);
     }
     100% {
-        left: 762px;
+        left: 962px;
         top: 200px;
         animation-timing-function: ease-out;
 
@@ -3876,5 +3887,6 @@ footer .row {
         margin-left: 100%; }
       .tabs .tab-2:last-child [type="radio"]:checked + div {
         margin-left: -100%; }
+
 
 /*# sourceMappingURL=main.css.map */
